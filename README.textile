@@ -1,0 +1,44 @@
+The library is still in development, this version however is usable.
+More details and proper code documentation coming soon, for the moment you can refer to the tests for usage examples.
+
+NOTE To Linux users:
+This library was tested on Mac OS X only, i never even tried to compile on Linux. I'll make sure everything works as soon as possible.
+
+h3. Usage
+
+<pre>
+Usage: ./proposer_main [options]
+
+Options:
+  -i N : Proposer id
+  -k N : Exit after proposing N values
+  -s N : Propose values of size N (max 8192)
+  -r   : Measure average time to propose a values
+</pre>
+
+<pre>
+Usage: ./acceptor_main [options]
+
+Options:
+  -i N : starts acceptor with id N (default is 0)
+</pre>
+
+<pre>
+Usage: ./learner_main [options]
+
+Options:
+  -k N : Exits after learning N values (default is 100)
+  -p N : Prints updates every N messages (default:1 = print all)
+  -r   : Do not print the rate when exiting
+  -m   : Mute (overrides -p)
+</pre>
+
+h3. Example
+
+<pre>
+./acceptor_main -i 0
+./acceptor_main -i 1
+./acceptor_main -i 2
+./leader_main
+./proposer_main -i 1 -s 64 -k 10000 -r
+</pre>

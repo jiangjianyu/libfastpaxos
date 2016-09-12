@@ -1,0 +1,2 @@
+/usr/bin/ar cr libfastpaxos.a  CMakeFiles/fastpaxos.dir/src/lib/acceptor.c.o CMakeFiles/fastpaxos.dir/src/lib/leader.c.o CMakeFiles/fastpaxos.dir/src/lib/learner.c.o CMakeFiles/fastpaxos.dir/src/lib/proposer.c.o CMakeFiles/fastpaxos.dir/src/common/paxos_udp.c.o
+/usr/bin/ranlib libfastpaxos.a

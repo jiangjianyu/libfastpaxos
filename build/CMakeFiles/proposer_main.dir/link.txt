@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/proposer_main.dir/src/test/proposer_main.c.o  -o proposer_main -rdynamic libfastpaxos.a -ldb -levent -lpthread 

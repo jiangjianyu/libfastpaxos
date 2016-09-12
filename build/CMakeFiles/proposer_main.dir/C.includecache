@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././include/libpaxos.h
+
+/home/jianyu/libfastpaxos/src/test/proposer_main.c
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+sys/time.h
+-
+libpaxos.h
+/home/jianyu/libfastpaxos/src/test/libpaxos.h
+

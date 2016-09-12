@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/learner_main.dir/src/test/learner_main.c.o  -o learner_main -rdynamic libfastpaxos.a -ldb -levent -lpthread 

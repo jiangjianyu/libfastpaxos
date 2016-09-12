@@ -1,0 +1,5 @@
+/home/jianyu/libfastpaxos/build/CMakeFiles/acceptor_main.dir
+/home/jianyu/libfastpaxos/build/CMakeFiles/fastpaxos.dir
+/home/jianyu/libfastpaxos/build/CMakeFiles/leader_main.dir
+/home/jianyu/libfastpaxos/build/CMakeFiles/learner_main.dir
+/home/jianyu/libfastpaxos/build/CMakeFiles/proposer_main.dir

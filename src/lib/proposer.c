@@ -10,6 +10,9 @@
 #include "libpaxos_priv.h"
 #include "paxos_udp.h"
 
+#define start_second 1473087552
+long start_consensus_time[20000];
+
 static pthread_mutex_t current_iid_lock = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t value_delivered_cond = PTHREAD_COND_INITIALIZER;
 
@@ -121,7 +124,7 @@ int proposer_init(int prop_id, int is_leader) {
     }
     proposer_id = prop_id;
     
-    learner_init_threaded(proposer_deliver_callback);
+    learner_init_threaded(proposer_deliver_callback, start_consensus_time);
     
     current_iid = 0;
     if (pthread_mutex_init(&current_iid_lock, NULL) != 0) {
@@ -169,6 +172,9 @@ void proposer_submit_value(char * value, size_t val_size) {
     client_waiting = 1;
     pthread_mutex_unlock(&current_iid_lock);
 
+    struct timeval now;
+    gettimeofday(&now, 0);
+    start_consensus_time[amsg->iid % 20000] = (now.tv_sec - start_second) * 1000000 + now.tv_usec;
     //Send accept for current instance
     msg->type = PAXOS_ACCEPT;
     msg->size = (sizeof(accept_msg) + val_size);

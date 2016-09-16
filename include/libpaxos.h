@@ -10,7 +10,7 @@ typedef void (* deliver_function)(char*, size_t, int, int, int);
 
 // int leader_init(int proposer_id);
 int learner_init(deliver_function f);
-int learner_init_threaded(deliver_function f);
+int learner_init_threaded(deliver_function f, long time_v[]);
 
 int proposer_init(int proposer_id, int is_leader);
 void proposer_submit_value(char * value, size_t val_size);
@@ -24,7 +24,7 @@ int acceptor_start(int acceptor_id);
 int proposer_queue_size();
 
 void proposer_print_event_counters();
-
+extern long start_consensus_time[20000];
 
 /*
     Starts the acceptor loop.

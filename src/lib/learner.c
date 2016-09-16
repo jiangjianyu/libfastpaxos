@@ -16,6 +16,13 @@
 #include "paxos_udp.h"
 
 #define MAX_ACCEPTORS 9
+#define start_second 1473087552
+
+
+long start_time[20000];
+long ack_time[20000][9];
+int ack_count[20000];
+FILE *fp = NULL;
 
 typedef struct learner_record_t {
     int         iid;
@@ -202,7 +209,13 @@ static void learner_handle_learn_msg(learn_msg* lmsg) {
     if (lmsg->iid > highest_seen) {
         highest_seen = lmsg->iid;
     }
-    
+
+    struct timeval now;
+    gettimeofday(&now, 0);
+    int mark_id = lmsg->iid % 20000;
+    ack_time[mark_id][ack_count[mark_id]++] =
+            (now.tv_sec - start_second)*1000000 + now.tv_usec - start_consensus_time[mark_id];
+
     //for each message update instance record
     int relevant = update_record(lmsg);
     if(!relevant) {
@@ -216,7 +229,20 @@ static void learner_handle_learn_msg(learn_msg* lmsg) {
         LOG(DBG, ("Not yet a quorum for instance %d\n", lmsg->iid));
         return;
     }
-
+    if (fp == NULL) {
+        fp = fopen("/home/maxxie/fast.log", "w+");
+    }
+    fprintf(fp, "%d %ld %ld %ld %ld %ld %ld %ld %ld %ld\n", lmsg->iid,
+            start_consensus_time[mark_id],
+            ack_time[mark_id][0],
+            ack_time[mark_id][1],
+            ack_time[mark_id][2],
+            ack_time[mark_id][3],
+            ack_time[mark_id][4],
+            ack_time[mark_id][5],
+            ack_time[mark_id][6],
+            ack_time[mark_id][7]
+    );
     //If the closed instance is last delivered + 1
     if (lmsg->iid == highest_delivered+1) {
         deliver_values(lmsg->iid);
@@ -379,13 +405,12 @@ static void* start_learner (void * arg) {
     return NULL;
 }
 
-int learner_init_threaded(deliver_function f) {
+int learner_init_threaded(deliver_function f, long time_v[]) {
     // Start learner (which starts event_dispatch())
     if (pthread_create(&learner_thread, NULL, start_learner, (void*) f) != 0) {
         perror("P: Failed to initialize learer thread");
         return -1;
     }
-    
     learner_wait_ready();
     return 0;
 }

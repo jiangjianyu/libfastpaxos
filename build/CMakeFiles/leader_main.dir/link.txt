@@ -1,1 +1,1 @@
-/usr/bin/cc     CMakeFiles/leader_main.dir/src/test/leader_main.c.o  -o leader_main -rdynamic libfastpaxos.a -ldb -levent -lpthread 
+/usr/bin/cc      CMakeFiles/leader_main.dir/src/test/leader_main.c.o  -o leader_main -rdynamic libfastpaxos.a -ldb -levent -lpthread 

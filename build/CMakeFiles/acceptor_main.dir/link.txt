@@ -1,1 +1,1 @@
-/usr/bin/cc     CMakeFiles/acceptor_main.dir/src/test/acceptor_main.c.o  -o acceptor_main -rdynamic libfastpaxos.a -ldb -levent -lpthread 
+/usr/bin/cc      CMakeFiles/acceptor_main.dir/src/test/acceptor_main.c.o  -o acceptor_main -rdynamic libfastpaxos.a -ldb -levent -lpthread 

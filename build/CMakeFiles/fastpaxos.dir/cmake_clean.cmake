@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/fastpaxos.dir/src/lib/acceptor.c.o"
   "CMakeFiles/fastpaxos.dir/src/lib/leader.c.o"
   "CMakeFiles/fastpaxos.dir/src/lib/learner.c.o"
@@ -9,6 +9,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
-  include(CMakeFiles/fastpaxos.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang C)
+  INCLUDE(CMakeFiles/fastpaxos.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

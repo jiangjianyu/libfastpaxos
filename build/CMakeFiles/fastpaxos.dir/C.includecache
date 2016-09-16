@@ -30,7 +30,7 @@ arpa/inet.h
 fcntl.h
 -
 
-/home/maxxie/ClionProjects/libfastpaxos/src/common/paxos_udp.c
+/home/jianyu/libfastpaxos/src/common/paxos_udp.c
 stdlib.h
 -
 stdio.h
@@ -46,7 +46,7 @@ arpa/inet.h
 fcntl.h
 -
 
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/acceptor.c
+/home/jianyu/libfastpaxos/src/lib/acceptor.c
 unistd.h
 -
 string.h
@@ -54,19 +54,19 @@ string.h
 stdlib.h
 -
 event.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/event.h
+/home/jianyu/libfastpaxos/src/lib/event.h
 paxos_udp.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/paxos_udp.h
+/home/jianyu/libfastpaxos/src/lib/paxos_udp.h
 libpaxos_priv.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/libpaxos_priv.h
+/home/jianyu/libfastpaxos/src/lib/libpaxos_priv.h
 acceptor_disk_helpers.c
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/acceptor_disk_helpers.c
+/home/jianyu/libfastpaxos/src/lib/acceptor_disk_helpers.c
 
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/acceptor_disk_helpers.c
+/home/jianyu/libfastpaxos/src/lib/acceptor_disk_helpers.c
 db.h
 -
 
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/leader.c
+/home/jianyu/libfastpaxos/src/lib/leader.c
 stdio.h
 -
 stdlib.h
@@ -80,15 +80,15 @@ math.h
 assert.h
 -
 event.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/event.h
+/home/jianyu/libfastpaxos/src/lib/event.h
 libpaxos.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/libpaxos.h
+/home/jianyu/libfastpaxos/src/lib/libpaxos.h
 libpaxos_priv.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/libpaxos_priv.h
+/home/jianyu/libfastpaxos/src/lib/libpaxos_priv.h
 paxos_udp.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/paxos_udp.h
+/home/jianyu/libfastpaxos/src/lib/paxos_udp.h
 
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/learner.c
+/home/jianyu/libfastpaxos/src/lib/learner.c
 stdlib.h
 -
 stdio.h
@@ -108,15 +108,15 @@ fcntl.h
 pthread.h
 -
 event.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/event.h
+/home/jianyu/libfastpaxos/src/lib/event.h
 evutil.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/evutil.h
+/home/jianyu/libfastpaxos/src/lib/evutil.h
 libpaxos_priv.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/libpaxos_priv.h
+/home/jianyu/libfastpaxos/src/lib/libpaxos_priv.h
 paxos_udp.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/paxos_udp.h
+/home/jianyu/libfastpaxos/src/lib/paxos_udp.h
 
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/proposer.c
+/home/jianyu/libfastpaxos/src/lib/proposer.c
 stdio.h
 -
 stdlib.h
@@ -128,11 +128,11 @@ memory.h
 assert.h
 -
 event.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/event.h
+/home/jianyu/libfastpaxos/src/lib/event.h
 libpaxos.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/libpaxos.h
+/home/jianyu/libfastpaxos/src/lib/libpaxos.h
 libpaxos_priv.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/libpaxos_priv.h
+/home/jianyu/libfastpaxos/src/lib/libpaxos_priv.h
 paxos_udp.h
-/home/maxxie/ClionProjects/libfastpaxos/src/lib/paxos_udp.h
+/home/jianyu/libfastpaxos/src/lib/paxos_udp.h
 

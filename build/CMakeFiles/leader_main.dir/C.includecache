@@ -8,11 +8,11 @@
 
 .././include/libpaxos.h
 
-/home/maxxie/ClionProjects/libfastpaxos/src/test/leader_main.c
+/home/jianyu/libfastpaxos/src/test/leader_main.c
 stdio.h
 -
 unistd.h
 -
 libpaxos.h
-/home/maxxie/ClionProjects/libfastpaxos/src/test/libpaxos.h
+/home/jianyu/libfastpaxos/src/test/libpaxos.h
 

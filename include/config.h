@@ -21,13 +21,13 @@
     TODO comment
     in milliseconds
 */
-#define PROMISE_TIMEOUT 10
+#define PROMISE_TIMEOUT 1
 
 /* 
     TODO comment
     in milliseconds
 */
-#define ACCEPT_TIMEOUT 10
+#define ACCEPT_TIMEOUT 1
 
 /* 
     TODO comment

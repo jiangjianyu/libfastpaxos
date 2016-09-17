@@ -8,7 +8,8 @@
 #include <arpa/inet.h>
 
 #include <fcntl.h>
-#include <pthread.h> 
+#include <pthread.h>
+#include <errno.h>
 #include "event.h"
 #include "evutil.h"
 
@@ -230,7 +231,7 @@ static void learner_handle_learn_msg(learn_msg* lmsg) {
         return;
     }
     if (fp == NULL) {
-        fp = fopen("/home/maxxie/fast.log", "w+");
+        fp = fopen("/home/jianyu/fast.log", "w+");
     }
     fprintf(fp, "%d %ld %ld %ld %ld %ld %ld %ld %ld %ld\n", lmsg->iid,
             start_consensus_time[mark_id],
@@ -345,8 +346,8 @@ static int libevent_start() {
 	lsync_interval.tv_sec = LEARNER_LSYNC_INTERVAL / 1000;
     lsync_interval.tv_usec = (LEARNER_LSYNC_INTERVAL % 1000) * 1000;
 	event_add(&lsync_event, &lsync_interval);
-	
-    return 0;    
+
+    return 0;
 }
 
 

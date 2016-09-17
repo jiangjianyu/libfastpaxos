@@ -1,0 +1,4 @@
+#!/bin/bash
+
+kill -9 $(pidof acceptor_main)
+kill -9 $(pidof leader_main)

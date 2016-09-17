@@ -123,7 +123,7 @@ int proposer_init(int prop_id, int is_leader) {
         leader = 1;
     }
     proposer_id = prop_id;
-    
+
     learner_init_threaded(proposer_deliver_callback, start_consensus_time);
     
     current_iid = 0;

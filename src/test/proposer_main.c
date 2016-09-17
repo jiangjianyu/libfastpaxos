@@ -116,7 +116,7 @@ int main (int argc, char const *argv[]) {
     parse_args(argc, (char **)argv);
     
     printf("Proposer %d starting\n", proposer_id);    
-
+	evthread_use_pthreads();
     if (proposer_init(proposer_id, 0) < 0) {
         printf("proposer init failed!\n");
         exit(1);

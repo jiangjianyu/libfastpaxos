@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named learner_main
+
+# Build rule for target.
+learner_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 learner_main
+.PHONY : learner_main
+
+# fast build rule for target.
+learner_main/fast:
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/build
+.PHONY : learner_main/fast
+
+#=============================================================================
 # Target rules for targets named fastpaxos
 
 # Build rule for target.
@@ -351,6 +364,33 @@ src/test/leader_main.c.s:
 	$(MAKE) -f CMakeFiles/leader_main.dir/build.make CMakeFiles/leader_main.dir/src/test/leader_main.c.s
 .PHONY : src/test/leader_main.c.s
 
+src/test/learner_main.o: src/test/learner_main.c.o
+
+.PHONY : src/test/learner_main.o
+
+# target to build an object file
+src/test/learner_main.c.o:
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/src/test/learner_main.c.o
+.PHONY : src/test/learner_main.c.o
+
+src/test/learner_main.i: src/test/learner_main.c.i
+
+.PHONY : src/test/learner_main.i
+
+# target to preprocess a source file
+src/test/learner_main.c.i:
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/src/test/learner_main.c.i
+.PHONY : src/test/learner_main.c.i
+
+src/test/learner_main.s: src/test/learner_main.c.s
+
+.PHONY : src/test/learner_main.s
+
+# target to generate assembly for a file
+src/test/learner_main.c.s:
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/src/test/learner_main.c.s
+.PHONY : src/test/learner_main.c.s
+
 src/test/proposer_main.o: src/test/proposer_main.c.o
 
 .PHONY : src/test/proposer_main.o
@@ -385,6 +425,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... learner_main"
 	@echo "... fastpaxos"
 	@echo "... leader_main"
 	@echo "... edit_cache"
@@ -411,6 +452,9 @@ help:
 	@echo "... src/test/leader_main.o"
 	@echo "... src/test/leader_main.i"
 	@echo "... src/test/leader_main.s"
+	@echo "... src/test/learner_main.o"
+	@echo "... src/test/learner_main.i"
+	@echo "... src/test/learner_main.s"
 	@echo "... src/test/proposer_main.o"
 	@echo "... src/test/proposer_main.i"
 	@echo "... src/test/proposer_main.s"

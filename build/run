@@ -1,0 +1,10 @@
+#!/bin/bash
+
+k_list=$(seq $1)
+for i in $k_list
+do
+	./acceptor_main -i $(( $i - 1 )) &
+done
+./leader_main $1 &
+sleep 1
+./proposer_main -i 1 -s 64 -k 10000 -r -n $1

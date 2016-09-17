@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/lib/proposer.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/lib/leader.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/common/paxos_udp.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/learner_main.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/proposer_main.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/acceptor_main.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/leader_main.c" isTestSource="false" />

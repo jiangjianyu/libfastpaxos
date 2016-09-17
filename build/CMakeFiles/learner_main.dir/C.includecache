@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././include/libpaxos.h
+
+/home/maxxie/ClionProjects/libfastpaxos/src/test/learner_main.c
+stdio.h
+-
+unistd.h
+-
+assert.h
+-
+stdlib.h
+-
+time.h
+-
+signal.h
+-
+math.h
+-
+libpaxos.h
+/home/maxxie/ClionProjects/libfastpaxos/src/test/libpaxos.h
+

@@ -60,6 +60,43 @@ CMAKE_SOURCE_DIR = /home/maxxie/ClionProjects/libfastpaxos
 CMAKE_BINARY_DIR = /home/maxxie/ClionProjects/libfastpaxos/build
 
 #=============================================================================
+# Target rules for target CMakeFiles/learner_main.dir
+
+# All Build rule for target.
+CMakeFiles/learner_main.dir/all: CMakeFiles/fastpaxos.dir/all
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/depend
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxxie/ClionProjects/libfastpaxos/build/CMakeFiles --progress-num=11,12 "Built target learner_main"
+.PHONY : CMakeFiles/learner_main.dir/all
+
+# Include target in all.
+all: CMakeFiles/learner_main.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/learner_main.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxxie/ClionProjects/libfastpaxos/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/learner_main.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/maxxie/ClionProjects/libfastpaxos/build/CMakeFiles 0
+.PHONY : CMakeFiles/learner_main.dir/rule
+
+# Convenience name for target.
+learner_main: CMakeFiles/learner_main.dir/rule
+
+.PHONY : learner_main
+
+# clean rule for target.
+CMakeFiles/learner_main.dir/clean:
+	$(MAKE) -f CMakeFiles/learner_main.dir/build.make CMakeFiles/learner_main.dir/clean
+.PHONY : CMakeFiles/learner_main.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/learner_main.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/fastpaxos.dir
 
 # All Build rule for target.
@@ -177,7 +214,7 @@ clean: CMakeFiles/acceptor_main.dir/clean
 CMakeFiles/proposer_main.dir/all: CMakeFiles/fastpaxos.dir/all
 	$(MAKE) -f CMakeFiles/proposer_main.dir/build.make CMakeFiles/proposer_main.dir/depend
 	$(MAKE) -f CMakeFiles/proposer_main.dir/build.make CMakeFiles/proposer_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxxie/ClionProjects/libfastpaxos/build/CMakeFiles --progress-num=11,12 "Built target proposer_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/maxxie/ClionProjects/libfastpaxos/build/CMakeFiles --progress-num=13,14 "Built target proposer_main"
 .PHONY : CMakeFiles/proposer_main.dir/all
 
 # Include target in all.

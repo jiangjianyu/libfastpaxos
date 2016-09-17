@@ -8,7 +8,8 @@
 #include <arpa/inet.h>
 
 #include <fcntl.h>
-#include <pthread.h> 
+#include <pthread.h>
+#include <errno.h>
 #include "event.h"
 #include "evutil.h"
 
@@ -345,8 +346,8 @@ static int libevent_start() {
 	lsync_interval.tv_sec = LEARNER_LSYNC_INTERVAL / 1000;
     lsync_interval.tv_usec = (LEARNER_LSYNC_INTERVAL % 1000) * 1000;
 	event_add(&lsync_event, &lsync_interval);
-	
-    return 0;    
+
+    return 0;
 }
 
 

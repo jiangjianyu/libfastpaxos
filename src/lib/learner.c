@@ -230,6 +230,7 @@ static void learner_handle_learn_msg(learn_msg* lmsg) {
         LOG(DBG, ("Not yet a quorum for instance %d\n", lmsg->iid));
         return;
     }
+    if (start_consensus_time[mark_id] != 0) {
     if (fp == NULL) {
         fp = fopen("/home/jianyu/fast.log", "w+");
     }
@@ -244,6 +245,7 @@ static void learner_handle_learn_msg(learn_msg* lmsg) {
             ack_time[mark_id][6],
             ack_time[mark_id][7]
     );
+	}
     //If the closed instance is last delivered + 1
     if (lmsg->iid == highest_delivered+1) {
         deliver_values(lmsg->iid);
